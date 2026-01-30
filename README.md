@@ -1,6 +1,11 @@
+<div align="center">
+
 # 🧠 Brain-Decoding-Guide
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+
+</div>
 > 📚This repo aims to guide researchers who are new to the **Brain Decoding** field to quickly learn about its techniques, datasets, and applications.
 
 ---
@@ -22,12 +27,16 @@
 
 ## Introduction
 
-Brief definition of Brain Decoding: 
-Brain decoding (also referred to as neural decoding) is a computational and neuroscientific technique that extracts meaningful, interpretable information about an individual’s subjective mental states, perceptual experiences, cognitive processes, or behavioral intentions directly from recorded brain activity (e.g., fMRI, EEG, MEG, or invasive neural recordings). It relies on machine learning algorithms, statistical modeling, and neuroscientific insights to map patterns of neural activity to specific mental content—moving beyond simply detecting brain activation to decoding the representational information encoded in neural signals, with applications in neuroscience research, brain-computer interfaces (BCIs), and clinical neuroscience.
+**Brief definition of Brain Decoding**: decoding the representational information encoded in neural signals
+
+Brain decoding (also referred to as neural decoding) is a computational and neuroscientific technique that extracts meaningful, interpretable information about an individual’s **subjective mental states**, **perceptual experiences**, **cognitive processes**, or **behavioral intentions** directly from recorded brain activity (e.g., **fMRI, EEG, MEG, or invasive neural recordings**). It relies on machine learning algorithms, statistical modeling, and neuroscientific insights to map patterns of neural activity to specific mental content, with applications in neuroscience research, brain-computer interfaces (BCIs), and clinical neuroscience.
 
 ## Key Surveys
 
-* **[2025] Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding** - Oota et al. [TMLR]
+* **[2025] A Survey on fMRI-based Brain Decoding for Reconstructing Multimodal Stimuli** [TPAMI]
+    * [[Paper]](https://arxiv.org/abs/2503.15978)
+
+* **[2025] Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding** [TMLR]
     * *A comprehensive survey covering both encoding and decoding, focusing on deep learning models and their alignment with brain activity.*
     * [[Paper]](https://openreview.net/forum?id=YxKJihRcby) [[Code]](https://github.com/subbareddy248/Awesome-Brain-Encoding--Decoding)
 
