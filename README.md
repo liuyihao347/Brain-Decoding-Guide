@@ -27,13 +27,14 @@
 
 ## Introduction
 
-**Brief definition of Brain Decoding**: decoding the representational information encoded in neural signals
+**Brief definition of Brain Decoding**:
 
 Brain decoding (also referred to as neural decoding) is a computational and neuroscientific technique that extracts meaningful, interpretable information about an individual’s **subjective mental states**, **perceptual experiences**, **cognitive processes**, or **behavioral intentions** directly from recorded brain activity (e.g., **fMRI, EEG, MEG, or invasive neural recordings**). It relies on machine learning algorithms, statistical modeling, and neuroscientific insights to map patterns of neural activity to specific mental content, with applications in neuroscience research, brain-computer interfaces (BCIs), and clinical neuroscience.
 
 ## Key Surveys
 
 * **[2025] A Survey on fMRI-based Brain Decoding for Reconstructing Multimodal Stimuli** [TPAMI]
+    * *A survey featuring comprehensive dataset/ROI summaries, in-depth classification and evaluation of mainstream models (e.g., end-to-end, pre-trained, LLM-centric).*
     * [[Paper]](https://arxiv.org/abs/2503.15978)
 
 * **[2025] Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding** [TMLR]
