@@ -7,24 +7,23 @@
 
 ## 📖 Table of Contents
 
-- [Introduction (简介)](#introduction)
-- [Key Surveys (综述论文)](#key-surveys)
-- [Neuroimaging Modalities (数据模态)](#neuroimaging-modalities)
-- [Core Algorithms (核心算法)](#core-algorithms)
-  - [Traditional ML](#traditional-ml)
-  - [Deep Learning (CNN/RNN)](#deep-learning)
-  - [Generative AI & LLMs](#generative-ai--llms) 🌟 *Hot*
-- [Applications (应用领域)](#applications)
-  - [Visual Reconstruction](#visual-reconstruction)
-  - [Speech Decoding](#speech-decoding)
-- [Datasets (常用数据集)](#datasets)
-- [Tools & Frameworks (工具与框架)](#tools--frameworks)
+- [Introduction](#introduction)
+- [Key Surveys](#key-surveys)
+- [Brain Signal Modalities](#brain-signal-modalities)
+- [Datasets](#datasets)
+- [Core Algorithms](#core-algorithms)
+  - [Traditional ML / Foundational works](#traditional-ml) 
+  - [Deep Learning](#deep-learning)
+  - [Generative AI & LLMs](#generative-ai--llms) 🌟 *Focus*
+- [Applications](#applications)
+- [Metrics & tools](#metrics--tools)
 
   ---
 
 ## Introduction
 
-简要介绍脑解码的定义：从神经活动（fMRI, EEG等）逆向推断外部刺激或心理状态。
+Brief definition of Brain Decoding: 
+Brain decoding (also referred to as neural decoding) is a computational and neuroscientific technique that extracts meaningful, interpretable information about an individual’s subjective mental states, perceptual experiences, cognitive processes, or behavioral intentions directly from recorded brain activity (e.g., fMRI, EEG, MEG, or invasive neural recordings). It relies on machine learning algorithms, statistical modeling, and neuroscientific insights to map patterns of neural activity to specific mental content—moving beyond simply detecting brain activation to decoding the representational information encoded in neural signals, with applications in neuroscience research, brain-computer interfaces (BCIs), and clinical neuroscience.
 
 ## Key Surveys
 
@@ -44,4 +43,4 @@
 
 ## Contributing
 
-欢迎提交 PR (Pull Request) 补充最新的论文！
+Welcome PRs (Pull Requests) for more papers and resources.
