@@ -125,23 +125,23 @@
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [High-Resolution Image Reconstruction with Latent Diffusion Models from Human Brain Activity](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | `Diffusion` | Zero-shot decoding | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
-| 2023 | [Seeing Beyond the Brain: MinD-Vis](https://arxiv.org/abs/2211.06956) | `Diffusion` | Masked pre-training | [[Code]](https://github.com/zjc062/mind-vis) |
-| 2023 | [Reconstructing the Mind's Eye: MindEye](https://arxiv.org/abs/2305.18274) | `Diffusion` | CLIP alignment | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
-| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-to-Image with 1 Hour of Data](https://arxiv.org/abs/2403.11207) | `Diffusion` | Cross-subject transfer | [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
-| 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://arxiv.org/abs/2404.07850) | `Diffusion` | Unified cross-subject | [[Code]](https://github.com/littlepure2333/MindBridge) |
+| 2023 | [High-Resolution Image Reconstruction with Latent Diffusion Models from Human Brain Activity](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | `Diffusion` | 无需微调，直接映射fMRI到LDM内部表示 | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
+| 2023 | [Seeing Beyond the Brain: MinD-Vis](https://arxiv.org/abs/2211.06956) | `Diffusion` | 大规模静息态fMRI自监督预训练+稀疏编码 | [[Code]](https://github.com/zjc062/mind-vis) |
+| 2023 | [Reconstructing the Mind's Eye: MindEye](https://arxiv.org/abs/2305.18274) | `Diffusion` | 双模块并行：对比学习检索+扩散先验重建 | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
+| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-to-Image with 1 Hour of Data](https://arxiv.org/abs/2403.11207) | `Diffusion` | 功能对齐实现跨被试迁移，仅需1小时数据 | [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
+| 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://arxiv.org/abs/2404.07850) | `Diffusion` | 单一模型解码多被试，生物启发聚合函数 | [[Code]](https://github.com/littlepure2333/MindBridge) |
 
 #### EEG → Image
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2024 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934) | `Diffusion` | EEG-to-image | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
+| 2024 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934) | `Diffusion` | 时间掩码预训练+CLIP对齐，首个EEG直接生图 | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
 
 #### fMRI → Video
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [Cinematic Mindscapes: High-Quality Video Reconstruction from Brain Activity](https://arxiv.org/abs/2305.11675) | `Diffusion` | Temporal modeling | [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
+| 2023 | [Cinematic Mindscapes: High-Quality Video Reconstruction from Brain Activity](https://arxiv.org/abs/2305.11675) | `Diffusion` | 时空注意力+对比学习，任意帧率视频重建 | [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
 
 ---
 
@@ -151,16 +151,16 @@
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | `RNN` | 62 words/min | [[Code]](https://github.com/fwillett/speechBCI) |
-| 2023 | [A High-Performance Neuroprosthesis for Speech Decoding and Avatar Control](https://www.nature.com/articles/s41586-023-06443-4) | `RNN` | Avatar control | |
-| 2025 | [A Streaming Brain-to-Voice Neuroprosthesis](https://www.nature.com/articles/s41593-025-01905-6) | `RNN-T` | 80ms streaming | [[Code]](https://github.com/cheoljun95/streaming.braindecoder) |
+| 2023 | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | `RNN` | 62词/分钟，首次大词汇量解码(12.5万词) | [[Code]](https://github.com/fwillett/speechBCI) |
+| 2023 | [A High-Performance Neuroprosthesis for Speech Decoding and Avatar Control](https://www.nature.com/articles/s41586-023-06443-4) | `RNN` | 数字头像实时控制，面部表情+语音同步 | |
+| 2025 | [A Streaming Brain-to-Voice Neuroprosthesis](https://www.nature.com/articles/s41593-025-01905-6) | `RNN-Transducer` | 80ms流式解码，实时语音合成 | [[Code]](https://github.com/cheoljun95/streaming.braindecoder) |
 
 #### Non-invasive Semantic (fMRI/EEG)
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [Semantic Reconstruction of Continuous Language from Non-invasive Brain Recordings](https://www.nature.com/articles/s41593-023-01304-9) | `Transformer` | GPT decoder | |
-| 2024 | [DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation](https://arxiv.org/abs/2309.14030) | `Transformer` | VQ codebook | |
+| 2023 | [Semantic Reconstruction of Continuous Language from Non-invasive Brain Recordings](https://www.nature.com/articles/s41593-023-01304-9) | `Transformer` | GPT自回归解码+束搜索，支持多皮层区域 | |
+| 2024 | [DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation](https://arxiv.org/abs/2309.14030) | `Transformer` | 离散码本对齐LLM，无需词级眼动标注 | |
 
 ---
 
@@ -168,9 +168,9 @@
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2024 | [CTNet: A Convolutional Transformer Network for EEG-based Motor Imagery Classification](https://www.nature.com/articles/s41598-024-71118-7) | `CNN-Transformer` | Hybrid architecture | |
-| 2023 | [EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization](https://ieeexplore.ieee.org/document/9991178) | `Conformer` | Spatial-temporal | [[Code]](https://github.com/eeyhsong/EEG-Conformer) |
-| 2022 | [ATCNet: Attention Temporal Convolutional Network for EEG-based Motor Imagery Classification](https://ieeexplore.ieee.org/document/9852687) | `TCN` | Multi-head attention | [[Code]](https://github.com/Altaheri/EEG-ATCNet) |
+| 2024 | [CTNet: A Convolutional Transformer Network for EEG-based Motor Imagery Classification](https://www.nature.com/articles/s41598-024-71118-7) | `CNN-Transformer` | CNN局部特征+Transformer全局依赖融合 | |
+| 2023 | [EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization](https://ieeexplore.ieee.org/document/9991178) | `Conformer` | 卷积+自注意力，类激活图脑地形可视化 | [[Code]](https://github.com/eeyhsong/EEG-Conformer) |
+| 2022 | [ATCNet: Attention Temporal Convolutional Network for EEG-based Motor Imagery Classification](https://ieeexplore.ieee.org/document/9852687) | `TCN` | 滑动窗口+多头注意力+TCN残差块 | [[Code]](https://github.com/Altaheri/EEG-ATCNet) |
 
 ---
 
@@ -213,12 +213,12 @@
 
 > Recent breakthroughs demonstrating real-world clinical impact.
 
-### UCSF Streaming Speech BCI (2025)
+### Synchron & Apple: Thought-Controlled iPad (2025)
 
-*In March 2025, researchers at UCSF published a streaming brain-to-voice neuroprosthesis in Nature Neuroscience. The system achieved real-time speech synthesis with only 80ms latency, enabling natural conversational flow for a patient with severe paralysis and anarthria.*
+*In August 2025, Synchron demonstrated the first-ever thought-controlled iPad using Apple's new BCI Human Interface Device (HID) protocol. Mark, a patient with ALS, navigated the iPad home screen, launched apps, and composed text messages—all using only his thoughts, without moving his hands, speaking, or using his eyes.*
 
-- **Key Tech**: ECoG recording, RNN-T decoder, personalized voice synthesis
-- [[Paper]](https://www.nature.com/articles/s41593-025-01905-6) [[Code]](https://github.com/cheoljun95/streaming.braindecoder)
+- **Key Tech**: Stentrode endovascular implant (minimally invasive), Apple BCI HID protocol, Switch Control integration
+- [[News]](https://www.businesswire.com/news/home/20250804537175/en/Synchron-Debuts-First-Thought-Controlled-iPad-Experience-Using-Apples-New-BCI-Human-Interface-Device-Protocol) [[Video Demo]](https://www.youtube.com/watch?v=YK8r5vdpozA)
 
 ### Neuralink's First Human Patient: Telepathy (2024)
 
