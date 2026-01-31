@@ -9,7 +9,7 @@
 
 </div>
 
-> 📚 This repo aims to guide researchers who are new to the Brain Decoding field to quickly learn about its techniques, datasets, and applications.
+> 📚 This repo aims to guide researchers who are new to the **Brain Decoding** field to quickly learn about its techniques, datasets, and applications.
 
 ---
 
@@ -20,13 +20,13 @@
 - [Datasets](#-datasets)
 - [Key Surveys](#-key-surveys)
 - [Foundational Works](#-foundational-works-pre-2023)
-- [Recent Advances & Core Algorithms](#-recent-advances--core-algorithms)
-  - [By Task](#by-task)
-  - [By Architecture](#by-architecture)
-  - [By Learning Paradigm](#by-learning-paradigm)
+- [Recent Advances](#-recent-advances)
+  - [Visual Reconstruction](#-visual-reconstruction)
+  - [Speech & Language Decoding](#-speech--language-decoding)
+  - [Motor & Intention Decoding](#-motor--intention-decoding)
+- [Metrics & Tools](#-metrics--tools)
 - [Clinical Application Cases](#-clinical-application-cases)
 - [Learning Resources](#-learning-resources)
-- [Metrics & Tools](#-metrics--tools)
 - [Contributing](#-contributing)
 
 ---
@@ -115,142 +115,61 @@
 
 ---
 
-## ⚙️ Recent Advances & Core Algorithms
+## ⚙️ Recent Advances
 
-> High-impact papers from 2023-2025, organized by task, architecture, and learning paradigm.
+> High-impact papers from 2023-2025.
 
-### By Task
+### 🖼️ Visual Reconstruction
 
-#### 🖼️ Visual Reconstruction
-
-##### fMRI → Image
+#### fMRI → Image
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [High-Resolution Image Reconstruction with Latent Diffusion Models from Human Brain Activity](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | `Diffusion` | First Stable Diffusion for fMRI; no fine-tuning needed | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
-| 2023 | [Seeing Beyond the Brain: MinD-Vis](https://arxiv.org/abs/2211.06956) | `Diffusion` `Pre-train` | Masked brain modeling + double-conditioned LDM | [[Code]](https://github.com/zjc062/mind-vis) |
-| 2023 | [Reconstructing the Mind's Eye: MindEye](https://arxiv.org/abs/2305.18274) | `Diffusion` `Contrastive` | Dual-pathway retrieval + reconstruction; CLIP alignment | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
-| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-to-Image with 1 Hour of Data](https://arxiv.org/abs/2403.11207) | `Diffusion` `Contrastive` | 1-hour fMRI suffices; cross-subject pre-training | [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
-| 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://arxiv.org/abs/2404.07850) | `Diffusion` | First unified cross-subject model; cyclic fMRI reconstruction | [[Code]](https://github.com/littlepure2333/MindBridge) |
+| 2023 | [High-Resolution Image Reconstruction with Latent Diffusion Models from Human Brain Activity](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | `Diffusion` | First LDM for fMRI | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
+| 2023 | [Seeing Beyond the Brain: MinD-Vis](https://arxiv.org/abs/2211.06956) | `Diffusion` | Masked pre-training | [[Code]](https://github.com/zjc062/mind-vis) |
+| 2023 | [Reconstructing the Mind's Eye: MindEye](https://arxiv.org/abs/2305.18274) | `Diffusion` | CLIP alignment | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
+| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-to-Image with 1 Hour of Data](https://arxiv.org/abs/2403.11207) | `Diffusion` | Cross-subject | [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
+| 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://arxiv.org/abs/2404.07850) | `Diffusion` | Unified cross-subject | [[Code]](https://github.com/littlepure2333/MindBridge) |
 
-##### EEG → Image
-
-| Year | Title | Arch | Feature | Links |
-|------|-------|------|---------|-------|
-| 2024 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934) | `Diffusion` `Pre-train` | First EEG-to-image without text; masked pre-training + CLIP | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
-
-##### fMRI → Video
+#### EEG → Image
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [Cinematic Mindscapes: High-Quality Video Reconstruction from Brain Activity](https://arxiv.org/abs/2305.11675) | `Diffusion` `Contrastive` | First high-quality video reconstruction; temporal inflation | [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
+| 2024 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934) | `Diffusion` | EEG-to-image | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
 
----
-
-#### 🗣️ Speech & Language Decoding
-
-##### Invasive Speech (ECoG)
+#### fMRI → Video
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | `RNN` | 62 words/min speech-to-text; highest-performing BCI | [[Code]](https://github.com/fwillett/speechBCI) |
-| 2023 | [A High-Performance Neuroprosthesis for Speech Decoding and Avatar Control](https://www.nature.com/articles/s41586-023-06443-4) | `RNN` `CNN` | Speech + avatar control; multimodal with facial expressions | |
-| 2024 | [NeuSpeech: A Neural Speech Decoding Framework](https://www.nature.com/articles/s42256-024-00824-8) | `CNN` | Differentiable speech synthesizer; natural-sounding output | |
+| 2023 | [Cinematic Mindscapes: High-Quality Video Reconstruction from Brain Activity](https://arxiv.org/abs/2305.11675) | `Diffusion` | First video reconstruction | [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
 
-##### Non-invasive Semantic (fMRI/EEG)
+---
+
+### 🗣️ Speech & Language Decoding
+
+#### Invasive Speech (ECoG)
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [Semantic Reconstruction of Continuous Language from Non-invasive Brain Recordings](https://www.nature.com/articles/s41593-023-01304-9) | `Transformer` `LLM` | First continuous language from fMRI; GPT-based decoder | |
-| 2024 | [DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation](https://arxiv.org/abs/2309.14030) | `Transformer` `LLM` | EEG-to-text via discrete codebook; VQ + LLM decoder | |
+| 2023 | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | `RNN` | 62 words/min | [[Code]](https://github.com/fwillett/speechBCI) |
+| 2023 | [A High-Performance Neuroprosthesis for Speech Decoding and Avatar Control](https://www.nature.com/articles/s41586-023-06443-4) | `RNN` | Multimodal avatar | |
 
----
-
-#### 🎯 Motor & Intention Decoding
+#### Non-invasive Semantic (fMRI/EEG)
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2024 | [CTNet: A Convolutional Transformer Network for EEG-based Motor Imagery Classification](https://www.nature.com/articles/s41598-024-71118-7) | `CNN` `Transformer` | Hybrid CNN-Transformer; 82.5% on BCI-IV-2a | |
-| 2025 | [AMEEGNet: Attention-based Multiscale EEGNet for Motor Imagery Decoding](https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1540033/full) | `CNN` `Attention` | Multi-scale EEGNet + channel attention; 81-95% on benchmarks | |
+| 2023 | [Semantic Reconstruction of Continuous Language from Non-invasive Brain Recordings](https://www.nature.com/articles/s41593-023-01304-9) | `Transformer` | GPT-based decoder | |
+| 2024 | [DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation](https://arxiv.org/abs/2309.14030) | `Transformer` | EEG-to-text | |
 
 ---
 
-### By Architecture
+### 🎯 Motor & Intention Decoding
 
-> Representative high-impact work for each core architecture.
-
-| Architecture | Title | Year | Feature | Links |
-|--------------|-------|------|---------|-------|
-| **CNN** | [EEGNet](https://iopscience.iop.org/article/10.1088/1741-2552/aace8c) | 2018 | Compact depthwise-separable CNN; BCI baseline | [[Code]](https://github.com/vlawhern/arl-eegmodels) |
-| **Transformer** | [Semantic Reconstruction of Continuous Language](https://www.nature.com/articles/s41593-023-01304-9) | 2023 | GPT-based decoder for fMRI-to-language | |
-| **RNN/LSTM** | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | 2023 | RNN for neural-to-text; 62 words/min | [[Code]](https://github.com/fwillett/speechBCI) |
-| **Diffusion** | [High-Resolution Image Reconstruction with LDM](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | 2023 | First Stable Diffusion for fMRI decoding | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
-
----
-
-### By Learning Paradigm
-
-> Representative work for each training paradigm.
-
-| Paradigm | Title | Year | Feature | Links |
-|----------|-------|------|---------|-------|
-| **Contrastive** | [MindEye](https://arxiv.org/abs/2305.18274) | 2023 | CLIP-based fMRI-image alignment; retrieval + reconstruction | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
-| **Masked Pre-training** | [EEGPT](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4540d267eeec4e5dbd9dae9448f0b739-Abstract-Conference.html) | 2024 | 10M-param Transformer; dual self-supervised learning | |
-| **Masked Pre-training** | [BrainLM](https://openreview.net/forum?id=RwI7ZEfR27) | 2024 | 6,700h fMRI pre-training; zero-shot network identification | |
-| **Masked Pre-training** | [MinD-Vis](https://arxiv.org/abs/2211.06956) | 2023 | Sparse masked brain modeling for fMRI | [[Code]](https://github.com/zjc062/mind-vis) |
-| **Generative** | [DreamDiffusion](https://arxiv.org/abs/2306.16934) | 2024 | EEG-to-image via diffusion prior | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
-
----
-
-## 🏥 Clinical Application Cases
-
-> Recent breakthroughs demonstrating real-world clinical impact.
-
-### Neuralink's First Human Patient: Telepathy (2024)
-
-*In January 2024, Neuralink implanted its "Telepathy" device in Noland Arbaugh, a patient with quadriplegia. He was able to control a computer cursor to play chess and Civilization VI solely through his thoughts.*
-
-- **Key Tech**: High-channel count invasive recording, spike sorting, real-time decoding
-- [[News]](https://neuralink.com/blog/) [[Video Demo]](https://www.youtube.com/watch?v=2rXrGH52aoM)
-
-### UC Davis ALS Speech BCI (2024)
-
-*In August 2024, researchers at UC Davis Health successfully used a BCI to restore speech for a man with ALS (Casey Harrell). The system decoded his intended speech with >97% accuracy within minutes of use, maintaining his own voice identity.*
-
-- **Key Tech**: High-density ECoG, deep learning for phoneme-to-speech mapping
-- [[Press Release]](https://health.ucdavis.edu/news/headlines/new-brain-computer-interface-allows-man-with-als-to-speak-again/2024/08) [[Paper (NEJM)]](https://www.nejm.org/doi/full/10.1056/NEJMoa2314132)
-
----
-
-## 📚 Learning Resources
-
-### 📺 Video Tutorials & Courses
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **Neuromatch Academy** | World-class open course on computational neuroscience; encoding/decoding basics | [[Website]](https://neuromatch.io/) [[YouTube]](https://www.youtube.com/@neuaboratory) [[Bilibili]](https://search.bilibili.com/all?keyword=Neuromatch) |
-| **Neuromatch NeuroAI Course** | Advanced 2-week intensive; natural vs artificial intelligence | [[Website]](https://neuromatch.io/neuroai-course/) |
-| **MIT 6.S191 Introduction to Deep Learning** | Deep learning fundamentals; free lectures & labs | [[Website]](https://introtodeeplearning.com/) [[YouTube]](https://www.youtube.com/watch?v=ErnWZxJovaM) |
-| **INCF: Deep Learning in Neuroscience** | Beginner-level DL for neuroscience applications | [[Website]](https://training.incf.org/lesson/fundamentals-deep-learning-neuroscience) |
-| **Mike X Cohen: Neural Signal Processing** | EEG/MEG signal processing & time-frequency analysis | [[YouTube]](https://www.youtube.com/@mikexcohen1) [[Book]](https://www.amazon.com/Analyzing-Neural-Time-Data-Practice/dp/0262019876) |
-| **Kendrick Kay: fMRI Analysis** | fMRI analysis tutorials from NSD creator | [[YouTube]](https://www.youtube.com/@kendrickkay) |
-
-### 📖 Textbooks & Reading
-
-| Resource | Description | Link |
-|----------|-------------|------|
-| **Principles of Neural Science (Kandel)** | Classic neuroscience textbook | [[Book]](https://www.amazon.com/Principles-Neural-Science-Eric-Kandel/dp/0071390111) |
-| **Theoretical Neuroscience (Dayan & Abbott)** | Computational neuroscience fundamentals | [[PDF]](https://boulderschool.yale.edu/sites/default/files/files/DasAbbott.pdf) |
-| **Deep Learning (Goodfellow et al.)** | Deep learning bible; free online | [[Website]](https://www.deeplearningbook.org/) |
-| **Awesome-Brain-Encoding-Decoding** | Curated paper list | [[GitHub]](https://github.com/subbareddy248/Awesome-Brain-Encoding--Decoding) |
-
-### 🌐 Communities
-
-| Community | Description | Link |
-|-----------|-------------|------|
-| **NeuroAI WeChat Group** | Chinese community for brain + AI research | Contact via Zhihu/WeChat |
-| **BCI Society** | International BCI research community | [[Website]](https://bcisociety.org/) |
-| **OHBM** | Organization for Human Brain Mapping | [[Website]](https://www.humanbrainmapping.org/) |
+| Year | Title | Arch | Feature | Links |
+|------|-------|------|---------|-------|
+| 2024 | [CTNet: A Convolutional Transformer Network for EEG-based Motor Imagery Classification](https://www.nature.com/articles/s41598-024-71118-7) | `CNN-Transformer` | Hybrid architecture | |
+| 2025 | [TCFormer: Temporal Convolutional Transformer for EEG-based Motor Imagery Decoding](https://www.nature.com/articles/s41598-025-16219-7) | `CNN-Transformer` | Multi-kernel CNN + TCN | |
+| 2025 | [SATrans-Net: Sparse Attention Transformer for EEG-based Motor Imagery Decoding](https://www.nature.com/articles/s41598-025-30806-8) | `CNN-Transformer` | Sparse attention | |
 
 ---
 
@@ -288,6 +207,59 @@
 | **Algonauts Project** | Annual challenge for predicting brain responses to visual stimuli | [[Website]](http://algonauts.csail.mit.edu/) |
 | **Brain-Score** | Benchmark for comparing DNNs with primate visual cortex | [[Website]](https://www.brain-score.org/) |
 | **MOABB** | Mother of All BCI Benchmarks; 36 EEG datasets, 30 pipelines | [[Website]](https://moabb.neurotechx.com/) |
+
+---
+
+## 🏥 Clinical Application Cases
+
+> Recent breakthroughs demonstrating real-world clinical impact.
+
+### Stanford Expressive Speech BCI (2025)
+
+*In June 2025, researchers at Stanford enabled a man with severe speech disability to speak expressively and even sing using a brain implant. The device translates neural activity to speech almost instantly, conveying intonation changes for questions, word emphasis, and allowing humming in three pitches.*
+
+- **Key Tech**: High-density ECoG, real-time neural-to-speech decoding with prosody
+- [[News]](https://www.nature.com/articles/d41586-025-01818-1) [[Paper (Nature)]](https://www.nature.com/articles/s41586-025-09127-3)
+
+### Neuralink's First Human Patient: Telepathy (2024)
+
+*In January 2024, Neuralink implanted its "Telepathy" device in Noland Arbaugh, a patient with quadriplegia. He was able to control a computer cursor to play chess and Civilization VI solely through his thoughts.*
+
+- **Key Tech**: High-channel count invasive recording, spike sorting, real-time decoding
+- [[News]](https://neuralink.com/blog/) [[Video Demo]](https://www.youtube.com/watch?v=2rXrGH52aoM)
+
+### UC Davis ALS Speech BCI (2024)
+
+*In August 2024, researchers at UC Davis Health successfully used a BCI to restore speech for a man with ALS (Casey Harrell). The system decoded his intended speech with >97% accuracy within minutes of use, maintaining his own voice identity.*
+
+- **Key Tech**: High-density ECoG, deep learning for phoneme-to-speech mapping
+- [[Press Release]](https://health.ucdavis.edu/news/headlines/new-brain-computer-interface-allows-man-with-als-to-speak-again/2024/08) [[Paper (NEJM)]](https://www.nejm.org/doi/full/10.1056/NEJMoa2314132)
+
+---
+
+## 📚 Learning Resources
+
+### 📺 Video Tutorials & Courses
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Neuromatch Academy** | World-class open course on computational neuroscience; encoding/decoding basics | [[Website]](https://neuromatch.io/) [[YouTube]](https://www.youtube.com/@neuaboratory) [[Bilibili]](https://search.bilibili.com/all?keyword=Neuromatch) |
+| **INCF: Deep Learning in Neuroscience** | Beginner-level DL for neuroscience applications | [[Website]](https://training.incf.org/lesson/fundamentals-deep-learning-neuroscience) |
+
+### 📖 Textbooks & Reading
+
+| Resource | Description | Link |
+|----------|-------------|------|
+| **Deep Learning (Goodfellow et al.)** | Deep learning bible; free online | [[Website]](https://www.deeplearningbook.org/) |
+| **Awesome-Brain-Encoding-Decoding** | Curated paper list | [[GitHub]](https://github.com/subbareddy248/Awesome-Brain-Encoding--Decoding) |
+
+### 🌐 Communities
+
+| Community | Description | Link |
+|-----------|-------------|------|
+| **NeuroAI WeChat Group** | Chinese community for brain + AI research | Contact via Zhihu/WeChat |
+| **BCI Society** | International BCI research community | [[Website]](https://bcisociety.org/) |
+| **OHBM** | Organization for Human Brain Mapping | [[Website]](https://www.humanbrainmapping.org/) |
 
 ---
 
