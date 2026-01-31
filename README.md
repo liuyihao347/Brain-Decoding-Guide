@@ -21,8 +21,8 @@
   - [Deep Learning](#deep-learning)
   - [Generative AI & LLMs](#generative-ai--llms) 🌟 *Focus*
 - [Applications](#applications)
-- [Clinical Application Cases](#clinical-application-cases-2024-2025) 🏥 *New*
-- [Learning Resources](#learning-resources) 📚 *New*
+- [Clinical Application Cases](#clinical-application-cases-2024-2025) 🏥 
+- [Learning Resources](#learning-resources) 📚 
 - [Metrics & tools](#metrics--tools)
 
   ---
@@ -33,93 +33,77 @@
 
 ## Key Surveys
 
-* **[2025] A Survey on fMRI-based Brain Decoding for Reconstructing Multimodal Stimuli** [TPAMI]
+* **[2025] A Survey on fMRI-based Brain Decoding for Reconstructing Multimodal Stimuli** [TPAMI] - Liu et al.
     * *A survey featuring comprehensive dataset/ROI summaries, in-depth classification and evaluation of mainstream models (e.g., end-to-end, pre-trained, LLM-centric).*
     * [[Paper]](https://arxiv.org/abs/2503.15978)
 
-* **[2025] Deep Neural Networks and Brain Alignment: Brain Encoding and Decoding** [TMLR]
+* **[2025] Deep Neural Networks aniud Brain Alignment: Brain Encoding and Decoding** [TMLR] - SUBBA et al.
     * *A comprehensive survey covering both encoding and decoding, focusing on deep learning models and their alignment with brain activity.*
     * [[Paper]](https://openreview.net/forum?id=YxKJihRcby) [[Code]](https://github.com/subbareddy248/Awesome-Brain-Encoding--Decoding)
 
-* **[2025] Transformer-based EEG Decoding: A Survey** - [ArXiv]
+* **[2025] Transformer-based EEG Decoding: A Survey** - [ArXiv] - Zhang et al.
     * *Systematic review of 200+ papers (2019-2024) on Transformer and hybrid architectures for EEG decoding across various tasks.*
     * [[Paper]](https://arxiv.org/abs/2507.02320)
 
 ## Datasets
 
-* **[2021] Natural Scenes Dataset (NSD)** - Allen et al.
+* **[2021] Natural Scenes Dataset (NSD)** [Nature Neuroscience] - Allen et al.
     * *A large-scale fMRI dataset conducted at 7T, consisting of whole-brain, high-resolution fMRI measurements of 8 healthy adult subjects while they viewed thousands of color natural scenes.*
     * [[Website]](https://naturalscenesdataset.org) [[Paper]](https://www.nature.com/articles/s41593-021-00962-x)
 
-* **[2019] THINGS Initiative (fMRI, MEG, EEG)** - Hebart et al.
+* **[2019] THINGS Initiative (fMRI, MEG, EEG)** [Plos one] - Hebart et al.
     * *A global initiative bridging brain and behavior with a shared set of 1,854 object concepts and 26,107 images. Includes THINGS-fMRI, THINGS-MEG, and THINGS-EEG datasets.*
     * [[Website]](https://things-initiative.org/) [[Paper]](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0223792)
 
-* **[2023] The Algonauts Project 2023 Challenge** - Gifford et al.
+* **[2023] The Algonauts Project 2023 Challenge** [ArXiv] - Gifford et al.
     * *A challenge to predict brain responses to complex natural visual scenes, based on the NSD dataset.*
     * [[Website]](http://algonauts.csail.mit.edu/) [[Paper]](https://arxiv.org/abs/2301.03198)
-
-* **[2019] Generic Object Decoding (GOD)** - Horikawa & Kamitani
-    * *fMRI dataset used for image reconstruction from human brain activity.*
-    * [[Dataset]](https://github.com/kamigaito/mind-vis) (Often used in Mind-Vis and other reconstruction works)
-
-* **[2024] Chisco: A Large-Scale Chinese Imagined Speech Corpus** - Zhang et al.
-    * *A high-density EEG dataset for decoding imagined speech, including over 20,000 sentences from healthy adults. The first large-scale Chinese imagined speech dataset.*
-    * [[Paper]](https://www.nature.com/articles/s41597-024-04130-3) [[Dataset]](https://figshare.com/articles/dataset/Chisco_A_Large-Scale_Chinese_Imagined_Speech_Corpus/24536644)
-
-* **[2025] ChineseEEG-2: A High-Density EEG Dataset** - [TBD]
-    * *A newly released high-density EEG dataset designed for multimodal semantic alignment and neural decoding tasks.*
-    * *Note: Details evolving, check recent literature.*
 
 ## Core Algorithms
 
 ### Traditional ML / Foundational works
-* **[2013] Ridge Regression** - Huth et al.
-    * *Classic encoding model using ridge regression to map semantic features to brain activity.*
-    * *Often used as a baseline.*
+* **[2016] Natural speech reveals the semantic maps that tile human cerebral cortex** [Nature] - Huth et al.
+    * *A foundational study using Ridge Regression (encoding model) to map semantic features to fMRI voxel responses, creating detailed semantic atlases.*
+    * [[Paper]](https://www.nature.com/articles/nature17637) [[Website]](https://gallantlab.org/huth2016/)
 
 ### Deep Learning
-* **[2019] Deep Image Reconstruction** - Shen et al. [PLoS Comp. Bio]
+* **[2019] Deep Image Reconstruction** [PLoS Comp. Bio] - Shen et al. 
     * *End-to-end deep learning framework for image reconstruction.*
     * [[Paper]](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006633)
 
-* **[2024] NeuSpeech: A Neural Speech Decoding Framework** - Chen et al. [Nature Machine Intelligence]
+* **[2024] NeuSpeech: A Neural Speech Decoding Framework** [Nature Machine Intelligence] - Chen et al. 
     * *Decodes human speech from ECoG signals using a lightweight convolutional neural network and speech synthesis. High performance in single-patient decoding.*
-    * [[Paper]](https://www.nature.com/articles/s42256-024-00824-8) [[Code]](https://github.com/NeuSpeech/NeuSpeech)
-
-* **[2024] Deep learning in motor imagery EEG signal decoding: A Systematic Review** - [ScienceDirect]
-    * *A comprehensive review of deep learning techniques (CNN, RNN, Transformers) applied to Motor Imagery EEG classification.*
-    * [[Paper]](https://www.sciencedirect.com/science/article/pii/S174680942400325X)
+    * [[Paper]](https://www.nature.com/articles/s42256-024-00824-8)
 
 ### Generative AI & LLMs
 
-* **[2023] High-resolution image reconstruction with latent diffusion models from human brain activity (MinD-Vis)** - Takagi & Nishimoto [CVPR]
+* **[2023] High-resolution image reconstruction with latent diffusion models from human brain activity (MinD-Vis)** [CVPR] - Takagi & Nishimoto 
     * *The seminal paper using Stable Diffusion for fMRI decoding.*
     * [[Paper]](https://arxiv.org/abs/2211.06956) [[Code]](https://github.com/kamigaito/mind-vis)
 
-* **[2024] DreamDiffusion: Generating High-Quality Images from Brain EEG Signals** - Bai et al.
+* **[2024] DreamDiffusion: Generating High-Quality Images from Brain EEG Signals** [ECCV] - Bai et al.
     * *Generating high-quality images directly from EEG signals without translating thoughts into text, using pre-trained text-to-image models.*
     * [[Paper]](https://arxiv.org/abs/2306.16934) [[Code]](https://github.com/bbaaii/DreamDiffusion)
 
-* **[2023] MinD-Video: High-quality Video Reconstruction from Brain Activity** - Chen et al.
+* **[2023] Seeing Beyond the Brain: Conditional Diffusion Model with Sparse Masked Modeling for Vision Decoding** [CVPR] - Chen et al.
+    * *MinD-Vis, a two-stage framework combining sparse masked brain modeling and double-conditioned latent diffusion, reconstructs semantically consistent images from fMRI signals.*
+    * [[Paper]](https://arxiv.org/abs/2211.06956) [[Code]](https://github.com/zjc062/mind-vis)
+
+* **[2023] Cinematic Mindscapes: High-quality Video Reconstruction from Brain Activity** [NeurIPS] - Chen et al.
     * *Progressively learns spatiotemporal information from continuous fMRI data for high-quality video reconstruction.*
     * [[Paper]](https://arxiv.org/abs/2305.11675) [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com)
 
-* **[2024] DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation** - Duan et al.
+* **[2024] DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation** [NeurIPS] - Duan et al.
     * *A framework for translating EEG waves into text using discrete encoding and large language models.*
-    * [[Paper]](https://arxiv.org/abs/2309.14030) (Check for code release)
+    * [[Paper]](https://arxiv.org/abs/2309.14030)
 
-* **[2024] MindEye2: Shared-Subject Models Enable Extreme Data Efficiency in fMRI-to-Image Reconstruction** - Scotti et al. [ICML]
+* **[2024] MindEye2: Shared-Subject Models Enable Extreme Data Efficiency in fMRI-to-Image Reconstruction** [ICML] - Scotti et al.
     * *State-of-the-art fMRI-to-image reconstruction model that achieves high performance even with limited data (1 hour) by leveraging shared-subject information.*
     * [[Paper]](https://arxiv.org/abs/2403.11207) [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/)
 
-* **[2024] MindBridge: A Cross-Subject Brain Decoding Framework** - Zhao et al. [CVPR]
+* **[2024] MindBridge: A Cross-Subject Brain Decoding Framework** [CVPR] - Zhao et al.
     * *A novel approach for cross-subject brain decoding that allows transferring decoding capabilities to new subjects with minimal calibration.*
-    * [[Paper]](https://arxiv.org/abs/2404.07850) [[Code]](https://github.com/ZhenZHAO/MindBridge)
-
-* **[2024] NeuroCreat: Visual-Semantic Reconstructions to Mental Concept** - Jing et al. [CVPR]
-    * *Proposes a multimodal architecture combining visual and textual abilities of LLMs to capture fine-grained semantic information for reconstruction.*
-    * [[Paper]](https://openaccess.thecvf.com/content/CVPR2024/html/Jing_Beyond_Brain_Decoding_Visual-Semantic_Reconstructions_to_Mental_Concept_CVPR_2024_paper.html)
+    * [[Paper]](https://arxiv.org/abs/2404.07850)
 
 ## Applications
 
@@ -145,26 +129,13 @@
 ## 📚 Learning Resources
 
 ### 📺 Video Tutorials & Talks
-* **[Bilibili] 脑机接口社区 (BCI Community)**
-    * *A dedicated channel sharing the latest reports, paper interpretations, and open classes on BCI and brain decoding.*
-    * [[Link]](https://space.bilibili.com/393666114)
 
 * **[Bilibili] Neuromatch Academy (NMA) - Computational Neuroscience**
     * *World-class open course on computational neuroscience. Highly recommended for understanding the basics of encoding/decoding models.*
     * [[Link]](https://search.bilibili.com/all?keyword=Neuromatch)
 
-* **[YouTube/Web] The Algonauts Project Talks**
-    * *Workshops and talks related to the Algonauts challenge, focusing on visual brain decoding.*
-    * [[Link]](http://algonauts.csail.mit.edu/)
 
 ### 📖 Community & Articles (Zhihu/Blogs)
-* **[Zhihu] Topic: Brain-Computer Interface (脑机接口)**
-    * *Follow high-quality contributors discussing fMRI decoding, EEG signal processing, and invasive BCI.*
-    * [[Link]](https://www.zhihu.com/topic/19556819/hot)
-
-* **[Zhihu] Topic: Computational Neuroscience (计算神经科学)**
-    * *In-depth discussions on neural encoding/decoding theories.*
-    * [[Link]](https://www.zhihu.com/topic/19572886/hot)
 
 ## Metrics & Tools
 
