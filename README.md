@@ -20,9 +20,13 @@
 - [Brain Signal Modalities](#-brain-signal-modalities)
 - [Datasets](#-datasets)
 - [Core Algorithms](#-core-algorithms)
-  - [Traditional ML / Foundational Works](#traditional-ml--foundational-works)
-  - [Deep Learning](#deep-learning)
-  - [Generative AI & LLMs](#generative-ai--llms) 🌟 *Focus*
+  - [Foundational Works](#-foundational-works-pre-2023)
+  - [Recent Advances by Task (2023-2025)](#-recent-advances-by-task-2023-2025)
+    - [Visual Reconstruction](#-visual-reconstruction)
+    - [Speech & Language Decoding](#-speech--language-decoding)
+    - [Motor & Intention Decoding](#-motor--intention-decoding)
+  - [By Architecture](#-by-architecture)
+  - [By Learning Paradigm](#-by-learning-paradigm)
 - [Applications](#-applications)
 - [Clinical Application Cases](#-clinical-application-cases-2024-2025)
 - [Learning Resources](#-learning-resources)
@@ -85,30 +89,105 @@
 
 ## ⚙️ Core Algorithms
 
-### Traditional ML / Foundational Works
+> **Architecture Tags**: `Diffusion` `Transformer` `CNN` `Contrastive` `LLM` `Pre-train` `RNN`
 
-| Year | Title | Venue | Highlights | Links |
-|------|-------|-------|------------|-------|
-| 2016 | Natural speech reveals the semantic maps that tile human cerebral cortex | Nature | Ridge Regression encoding model, semantic atlas mapping | [[Paper]](https://www.nature.com/articles/nature17637) [[Website]](https://gallantlab.org/huth2016/) |
+---
 
-### Deep Learning
+### 📜 Foundational Works (Pre-2023)
 
-| Year | Title | Venue | Highlights | Links |
-|------|-------|-------|------------|-------|
-| 2019 | Deep Image Reconstruction | PLoS Comp. Bio | End-to-end DL framework for image reconstruction | [[Paper]](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006633) |
-| 2024 | NeuSpeech | Nature Machine Intelligence | Decodes speech from ECoG using lightweight CNN | [[Paper]](https://www.nature.com/articles/s42256-024-00824-8) |
+> Milestone papers that established the field. Not limited to recent years.
 
-### Generative AI & LLMs
+| Year | Title | Task | Feature (1-sentence) | Links |
+|------|-------|------|----------------------|-------|
+| 2011 | Nishimoto et al. (Gallant Lab) | Visual | **First movie reconstruction from fMRI**; motion-energy encoding model, 740+ citations | [[Paper]](https://www.cell.com/current-biology/fulltext/S0960-9822(11)00937-7) |
+| 2016 | Huth et al. (Gallant Lab) | Semantic | **Semantic atlas of human cortex**; Ridge Regression maps word embeddings to voxels, 1800+ citations | [[Paper]](https://www.nature.com/articles/nature17637) [[Website]](https://gallantlab.org/huth2016/) |
+| 2018 | EEGNet | Motor BCI | **Compact CNN baseline for BCI**; depthwise separable convolutions, 3500+ citations | [[Paper]](https://iopscience.iop.org/article/10.1088/1741-2552/aace8c) [[Code]](https://github.com/vlawhern/arl-eegmodels) |
+| 2019 | Shen et al. | Visual | **End-to-end DNN for image reconstruction**; iterative optimization in DNN feature space | [[Paper]](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006633) |
 
-| Year | Title | Venue | Highlights | Links |
-|------|-------|-------|------------|-------|
-| 2023 | High-resolution image reconstruction with latent diffusion models from human brain activity | CVPR | Seminal paper using Stable Diffusion for fMRI decoding | [[Paper]](https://www.biorxiv.org/content/10.1101/2022.11.18.517004v3) [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
-| 2023 | MinD-Vis: Seeing Beyond the Brain | CVPR | Sparse masked brain modeling + double-conditioned LDM | [[Paper]](https://arxiv.org/abs/2211.06956) [[Code]](https://github.com/zjc062/mind-vis) |
-| 2023 | MinD-Video: Cinematic Mindscapes | NeurIPS | High-quality video reconstruction from fMRI | [[Paper]](https://arxiv.org/abs/2305.11675) [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
-| 2024 | DreamDiffusion | ECCV | Generate images from EEG without text translation | [[Paper]](https://arxiv.org/abs/2306.16934) [[Code]](https://github.com/bbaaii/DreamDiffusion) |
-| 2024 | DeWave | NeurIPS | EEG-to-text using discrete encoding + LLMs | [[Paper]](https://arxiv.org/abs/2309.14030) |
-| 2024 | MindEye2 | ICML | SOTA fMRI-to-image with extreme data efficiency (1 hour) | [[Paper]](https://arxiv.org/abs/2403.11207) [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
-| 2024 | MindBridge | CVPR | Cross-subject brain decoding with minimal calibration | [[Paper]](https://arxiv.org/abs/2404.07850) |
+---
+
+### 🔬 Recent Advances by Task (2023-2025)
+
+> High-citation papers from the last 3 years, organized by task.
+
+#### 🖼️ Visual Reconstruction
+
+##### fMRI → Image
+
+| Year | Title | Arch | Feature (1-sentence) | Citations | Links |
+|------|-------|------|----------------------|-----------|-------|
+| 2023 | Takagi & Nishimoto | `Diffusion` | **First to use Stable Diffusion for fMRI**; no fine-tuning, maps fMRI to LDM latent space | 280+ | [[Paper]](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
+| 2023 | MinD-Vis | `Diffusion` `Pre-train` | **Masked brain modeling + double-conditioned LDM**; self-supervised pre-training | 200+ | [[Paper]](https://arxiv.org/abs/2211.06956) [[Code]](https://github.com/zjc062/mind-vis) |
+| 2023 | MindEye | `Diffusion` `Contrastive` | **Dual-pathway (retrieval + reconstruction)**; maps fMRI to CLIP space | 150+ | [[Paper]](https://arxiv.org/abs/2305.18274) [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
+| 2024 | MindEye2 | `Diffusion` `Contrastive` | **1-hour fMRI data suffices**; cross-subject pre-training enables extreme efficiency | - | [[Paper]](https://arxiv.org/abs/2403.11207) [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
+| 2024 | MindBridge | `Diffusion` | **First unified cross-subject model**; cyclic reconstruction for subject-invariant features | - | [[Paper]](https://arxiv.org/abs/2404.07850) [[Code]](https://github.com/littlepure2333/MindBridge) |
+
+##### EEG → Image
+
+| Year | Title | Arch | Feature (1-sentence) | Citations | Links |
+|------|-------|------|----------------------|-----------|-------|
+| 2024 | DreamDiffusion | `Diffusion` `Pre-train` | **First EEG-to-image without text**; masked signal pre-training + CLIP alignment | 150+ | [[Paper]](https://arxiv.org/abs/2306.16934) [[Code]](https://github.com/bbaaii/DreamDiffusion) |
+
+##### fMRI → Video
+
+| Year | Title | Arch | Feature (1-sentence) | Citations | Links |
+|------|-------|------|----------------------|-----------|-------|
+| 2023 | MinD-Video | `Diffusion` `Contrastive` | **First high-quality video reconstruction**; progressive learning with temporal inflation | 100+ | [[Paper]](https://arxiv.org/abs/2305.11675) [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
+
+---
+
+#### 🗣️ Speech & Language Decoding
+
+##### Invasive Speech (ECoG)
+
+| Year | Title | Arch | Feature (1-sentence) | Citations | Links |
+|------|-------|------|----------------------|-----------|-------|
+| 2023 | Willett et al. | `RNN` | **62 words/min speech-to-text**; highest-performing speech neuroprosthesis (Nature) | 400+ | [[Paper]](https://www.nature.com/articles/s41586-023-06377-x) [[Code]](https://github.com/fwillett/speechBCI) |
+| 2023 | Metzger et al. (Chang Lab) | `RNN` `CNN` | **Speech + avatar control**; multimodal output with facial expressions (Nature) | 300+ | [[Paper]](https://www.nature.com/articles/s41586-023-06443-4) |
+| 2024 | NeuSpeech | `CNN` | **Differentiable speech synthesizer**; lightweight CNN, natural-sounding output | - | [[Paper]](https://www.nature.com/articles/s42256-024-00824-8) |
+
+##### Non-invasive Semantic (fMRI/EEG)
+
+| Year | Title | Arch | Feature (1-sentence) | Citations | Links |
+|------|-------|------|----------------------|-----------|-------|
+| 2023 | Tang et al. (Semantic Decoder) | `Transformer` `LLM` | **First continuous language from fMRI**; GPT-based decoder (Nature Neuroscience) | 500+ | [[Paper]](https://www.nature.com/articles/s41593-023-01304-9) |
+| 2024 | DeWave | `Transformer` `LLM` | **EEG-to-text via discrete codebook**; vector-quantized encoding + LLM decoder | - | [[Paper]](https://arxiv.org/abs/2309.14030) |
+
+---
+
+#### 🎯 Motor & Intention Decoding
+
+| Year | Title | Arch | Feature (1-sentence) | Citations | Links |
+|------|-------|------|----------------------|-----------|-------|
+| 2024 | CTNet | `CNN` `Transformer` | **Hybrid CNN-Transformer for motor imagery**; 82.5% on BCI-IV-2a | - | [[Paper]](https://www.nature.com/articles/s41598-024-71118-7) |
+| 2025 | AMEEGNet | `CNN` `Attention` | **Multi-scale EEGNet + channel attention**; 81-95% across BCI benchmarks | - | [[Paper]](https://www.frontiersin.org/journals/neurorobotics/articles/10.3389/fnbot.2025.1540033/full) |
+
+---
+
+### 🏗️ By Architecture
+
+> Core network architectures used in brain decoding.
+
+| Architecture | Representative Work | Year | Citations | Why It Matters | Links |
+|--------------|---------------------|------|-----------|----------------|-------|
+| **CNN** | EEGNet | 2018 | 3500+ | Compact depthwise-separable CNN; de facto baseline for EEG-BCI | [[Paper]](https://iopscience.iop.org/article/10.1088/1741-2552/aace8c) |
+| **Transformer** | Tang et al. (Semantic Decoder) | 2023 | 500+ | GPT-based decoder for continuous language from fMRI | [[Paper]](https://www.nature.com/articles/s41593-023-01304-9) |
+| **RNN/LSTM** | Willett et al. | 2023 | 400+ | RNN for neural-to-text; 62 words/min speech BCI | [[Paper]](https://www.nature.com/articles/s41586-023-06377-x) |
+| **Diffusion (U-Net)** | Takagi & Nishimoto | 2023 | 280+ | First Stable Diffusion for fMRI image reconstruction | [[Paper]](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) |
+
+---
+
+### 📐 By Learning Paradigm
+
+> Training strategies and learning methods in brain decoding.
+
+| Paradigm | Representative Work | Year | Key Idea | Links |
+|----------|---------------------|------|----------|-------|
+| **Contrastive** | MindEye | 2023 | CLIP-based alignment of fMRI and image embeddings; retrieval + reconstruction | [[Paper]](https://arxiv.org/abs/2305.18274) |
+| **Masked Pre-training** | EEGPT | 2024 | Mask-based self-supervised learning on large EEG corpora (NeurIPS 2024) | [[Paper]](https://proceedings.neurips.cc/paper_files/paper/2024/hash/4540d267eeec4e5dbd9dae9448f0b739-Abstract-Conference.html) |
+| **Masked Pre-training** | BrainLM | 2024 | 6,700h fMRI pre-training with masked prediction (ICLR 2024) | [[Paper]](https://openreview.net/forum?id=RwI7ZEfR27) |
+| **Masked Pre-training** | MinD-Vis | 2023 | Sparse masked brain modeling for fMRI representation learning | [[Paper]](https://arxiv.org/abs/2211.06956) |
+| **Generative (Diffusion)** | DreamDiffusion | 2024 | EEG-to-image via diffusion prior without text intermediate | [[Paper]](https://arxiv.org/abs/2306.16934) |
 
 ---
 
