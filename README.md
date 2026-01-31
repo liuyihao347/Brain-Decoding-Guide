@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="Title image.png" width="800">
+<img src="Title image.png" width="100%">
 
 # 🧠 Brain-Decoding-Guide
 
