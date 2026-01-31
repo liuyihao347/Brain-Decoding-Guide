@@ -1,12 +1,14 @@
 <div align="center">
 
+<img src="Title image.png" width="800">
+
 # 🧠 Brain-Decoding-Guide
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
 </div>
-> 📚This repo aims to guide researchers who are new to the **Brain Decoding** field to quickly learn about its techniques, datasets, and applications.
+> 📚This repo aims to guide researchers who are new to the Brain Decoding field to quickly learn about its techniques, datasets, and applications.
 
 ---
 
@@ -41,7 +43,7 @@
     * *A comprehensive survey covering both encoding and decoding, focusing on deep learning models and their alignment with brain activity.*
     * [[Paper]](https://openreview.net/forum?id=YxKJihRcby) [[Code]](https://github.com/subbareddy248/Awesome-Brain-Encoding--Decoding)
 
-* **[2025] Transformer-based EEG Decoding: A Survey** - [ArXiv] - Zhang et al.
+* **[2025] Transformer-based EEG Decoding: A Survey** [ArXiv] - Zhang et al.
     * *Systematic review of 200+ papers (2019-2024) on Transformer and hybrid architectures for EEG decoding across various tasks.*
     * [[Paper]](https://arxiv.org/abs/2507.02320)
 
