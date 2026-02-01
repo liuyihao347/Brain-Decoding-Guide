@@ -59,17 +59,15 @@
 | Year | Dataset | Description | Links |
 |------|---------|-------------|-------|
 | 2021 | **Natural Scenes Dataset (NSD)** | 7T whole-brain, 8 subjects, ~70k image trials; gold standard for visual decoding | [[Website]](https://naturalscenesdataset.org) [[Paper]](https://www.nature.com/articles/s41593-021-00962-x) |
-| 2023 | **Algonauts 2023 Challenge** | Predict brain responses to natural scenes (based on NSD) | [[Website]](http://algonauts.csail.mit.edu/) [[Paper]](https://arxiv.org/abs/2301.03198) |
-| 2021 | **Bold Moments Dataset** | 10 subjects, 1,000+ video clips, naturalistic movie stimuli | [[Website]](https://boldmoments.github.io/) [[Paper]](https://www.nature.com/articles/s41467-021-24899-2) |
+| 2023 | **Algonauts 2023 Challenge** | Predict brain responses to natural scenes (based on NSD) | [[Website]](https://algonautsproject.com/) [[Paper]](https://arxiv.org/abs/2301.03198) |
+| 2021 | **Bold Moments Dataset** | 10 subjects, 1,000+ video clips, naturalistic movie stimuli | [[Website]](https://github.com/blahner/BOLDMomentsDataset) [[Paper]](https://www.nature.com/articles/s41467-024-50310-3) |
 | 2017 | **Vim-1 / Vim-2 (Gallant Lab)** | Classic visual decoding datasets; natural images & movies | [[Website]](https://gallantlab.org/data/) |
 
 ### EEG Datasets
 
 | Year | Dataset | Description | Links |
 |------|---------|-------------|-------|
-| 2008 | **BCI Competition IV (2a, 2b)** | Motor imagery benchmark; 9 subjects, 4-class MI | [[Website]](https://www.bbci.de/competition/iv/) |
 | 2015 | **SEED** | Emotion recognition; 15 subjects, 3 emotions, film clips | [[Website]](https://bcmi.sjtu.edu.cn/home/seed/) |
-| 2012 | **DEAP** | Emotion recognition; 32 subjects, music videos, physiological signals | [[Website]](https://www.eecs.qmul.ac.uk/mmv/datasets/deap/) |
 | 2019 | **THINGS-EEG** | Object recognition; 50 subjects, 22k images, rapid serial presentation | [[Website]](https://things-initiative.org/) |
 | 2024 | **MOABB** | Unified benchmark platform; 30+ pipelines, 36 datasets | [[Website]](https://moabb.neurotechx.com/) [[Paper]](https://arxiv.org/abs/2404.15319) |
 
@@ -107,8 +105,7 @@
 
 | Year | Title | Task | Feature | Links |
 |------|-------|------|---------|-------|
-| 2011 | [Reconstructing Visual Experiences from Brain Activity Evoked by Natural Movies](https://www.cell.com/current-biology/fulltext/S0960-9822(11)00937-7) | Visual | Motion-energy encoding | [[Website]](https://gallantlab.org/) |
-| 2016 | [Natural Speech Reveals the Semantic Maps that Tile Human Cerebral Cortex](https://www.nature.com/articles/nature17637) | Semantic | Cortical semantic atlas | [[Website]](https://gallantlab.org/huth2016/) |
+| 2016 | [Natural Speech Reveals the Semantic Maps that Tile Human Cerebral Cortex](https://www.nature.com/articles/nature17637) | Semantic | Cortical semantic atlas | |
 | 2017 | [Deep Learning with Convolutional Neural Networks for EEG Decoding and Visualization](https://onlinelibrary.wiley.com/doi/10.1002/hbm.23730) | Motor | Interpretable filters | [[Code]](https://github.com/braindecode/braindecode) |
 | 2018 | [EEGNet: A Compact Convolutional Neural Network for EEG-based BCIs](https://iopscience.iop.org/article/10.1088/1741-2552/aace8c) | Motor | BCI baseline | [[Code]](https://github.com/vlawhern/arl-eegmodels) |
 | 2019 | [Deep Image Reconstruction from Human Brain Activity](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1006633) | Visual | Feature optimization | |
