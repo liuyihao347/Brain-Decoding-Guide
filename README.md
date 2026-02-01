@@ -125,23 +125,23 @@
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [High-Resolution Image Reconstruction with Latent Diffusion Models from Human Brain Activity](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | `Diffusion` | 无需微调，直接映射fMRI到LDM内部表示 | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
-| 2023 | [Seeing Beyond the Brain: MinD-Vis](https://arxiv.org/abs/2211.06956) | `Diffusion` | 大规模静息态fMRI自监督预训练+稀疏编码 | [[Code]](https://github.com/zjc062/mind-vis) |
-| 2023 | [Reconstructing the Mind's Eye: MindEye](https://arxiv.org/abs/2305.18274) | `Diffusion` | 双模块并行：对比学习检索+扩散先验重建 | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
-| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-to-Image with 1 Hour of Data](https://arxiv.org/abs/2403.11207) | `Diffusion` | 功能对齐实现跨被试迁移，仅需1小时数据 | [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
-| 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://arxiv.org/abs/2404.07850) | `Diffusion` | 单一模型解码多被试，生物启发聚合函数 | [[Code]](https://github.com/littlepure2333/MindBridge) |
+| 2023 | [High-Resolution Image Reconstruction with Latent Diffusion Models from Human Brain Activity](https://openaccess.thecvf.com/content/CVPR2023/html/Takagi_High-Resolution_Image_Reconstruction_With_Latent_Diffusion_Models_From_Human_Brain_CVPR_2023_paper.html) | `Diffusion` | Direct fMRI-to-LDM mapping without fine-tuning | [[Code]](https://github.com/yu-takagi/StableDiffusionReconstruction) |
+| 2023 | [Seeing Beyond the Brain: MinD-Vis](https://arxiv.org/abs/2211.06956) | `Diffusion` | Large-scale resting-state fMRI pre-training + sparse coding | [[Code]](https://github.com/zjc062/mind-vis) |
+| 2023 | [Reconstructing the Mind's Eye: MindEye](https://arxiv.org/abs/2305.18274) | `Diffusion` | Dual-path: contrastive retrieval + diffusion prior | [[Code]](https://github.com/MedARC-AI/fmri-reconstruction-nsd) |
+| 2024 | [MindEye2: Shared-Subject Models Enable fMRI-to-Image with 1 Hour of Data](https://arxiv.org/abs/2403.11207) | `Diffusion` | Cross-subject transfer via functional alignment; only 1hr data needed | [[Code]](https://github.com/MedARC-AI/MindEyeV2) [[Website]](https://medarc-ai.github.io/mindeye2/) |
+| 2024 | [MindBridge: A Cross-Subject Brain Decoding Framework](https://arxiv.org/abs/2404.07850) | `Diffusion` | Single model for multi-subject; bio-inspired aggregation | [[Code]](https://github.com/littlepure2333/MindBridge) |
 
 #### EEG → Image
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2024 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934) | `Diffusion` | 时间掩码预训练+CLIP对齐，首个EEG直接生图 | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
+| 2024 | [DreamDiffusion: Generating High-Quality Images from Brain EEG Signals](https://arxiv.org/abs/2306.16934) | `Diffusion` | Temporal masking pre-train + CLIP alignment; first EEG-to-image | [[Code]](https://github.com/bbaaii/DreamDiffusion) |
 
 #### fMRI → Video
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [Cinematic Mindscapes: High-Quality Video Reconstruction from Brain Activity](https://arxiv.org/abs/2305.11675) | `Diffusion` | 时空注意力+对比学习，任意帧率视频重建 | [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
+| 2023 | [Cinematic Mindscapes: High-Quality Video Reconstruction from Brain Activity](https://arxiv.org/abs/2305.11675) | `Diffusion` | Spatiotemporal attention + contrastive learning; arbitrary frame-rate | [[Code]](https://github.com/jqin4749/MindVideo) [[Website]](https://www.mind-video.com) |
 
 ---
 
@@ -151,16 +151,16 @@
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | `RNN` | 62词/分钟，首次大词汇量解码(12.5万词) | [[Code]](https://github.com/fwillett/speechBCI) |
-| 2023 | [A High-Performance Neuroprosthesis for Speech Decoding and Avatar Control](https://www.nature.com/articles/s41586-023-06443-4) | `RNN` | 数字头像实时控制，面部表情+语音同步 | |
-| 2025 | [A Streaming Brain-to-Voice Neuroprosthesis](https://www.nature.com/articles/s41593-025-01905-6) | `RNN-Transducer` | 80ms流式解码，实时语音合成 | [[Code]](https://github.com/cheoljun95/streaming.braindecoder) |
+| 2023 | [A High-Performance Speech Neuroprosthesis](https://www.nature.com/articles/s41586-023-06377-x) | `RNN` | 62 wpm; first large-vocab decoding (125k words) | [[Code]](https://github.com/fwillett/speechBCI) |
+| 2023 | [A High-Performance Neuroprosthesis for Speech Decoding and Avatar Control](https://www.nature.com/articles/s41586-023-06443-4) | `RNN` | Real-time avatar control with facial expression + speech | |
+| 2025 | [A Streaming Brain-to-Voice Neuroprosthesis](https://www.nature.com/articles/s41593-025-01905-6) | `RNN-Transducer` | 80ms streaming decoding; real-time speech synthesis | [[Code]](https://github.com/cheoljun95/streaming.braindecoder) |
 
 #### Non-invasive Semantic (fMRI/EEG)
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2023 | [Semantic Reconstruction of Continuous Language from Non-invasive Brain Recordings](https://www.nature.com/articles/s41593-023-01304-9) | `Transformer` | GPT自回归解码+束搜索，支持多皮层区域 | |
-| 2024 | [DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation](https://arxiv.org/abs/2309.14030) | `Transformer` | 离散码本对齐LLM，无需词级眼动标注 | |
+| 2023 | [Semantic Reconstruction of Continuous Language from Non-invasive Brain Recordings](https://www.nature.com/articles/s41593-023-01304-9) | `Transformer` | GPT autoregressive decoding + beam search; multi-cortex support | |
+| 2024 | [DeWave: Discrete EEG Waves Encoding for Brain Dynamics to Text Translation](https://arxiv.org/abs/2309.14030) | `Transformer` | Discrete codebook alignment to LLM; no word-level gaze annotation | |
 
 ---
 
@@ -168,9 +168,9 @@
 
 | Year | Title | Arch | Feature | Links |
 |------|-------|------|---------|-------|
-| 2024 | [CTNet: A Convolutional Transformer Network for EEG-based Motor Imagery Classification](https://www.nature.com/articles/s41598-024-71118-7) | `CNN-Transformer` | CNN局部特征+Transformer全局依赖融合 | |
-| 2023 | [EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization](https://ieeexplore.ieee.org/document/9991178) | `Conformer` | 卷积+自注意力，类激活图脑地形可视化 | [[Code]](https://github.com/eeyhsong/EEG-Conformer) |
-| 2022 | [ATCNet: Attention Temporal Convolutional Network for EEG-based Motor Imagery Classification](https://ieeexplore.ieee.org/document/9852687) | `TCN` | 滑动窗口+多头注意力+TCN残差块 | [[Code]](https://github.com/Altaheri/EEG-ATCNet) |
+| 2024 | [CTNet: A Convolutional Transformer Network for EEG-based Motor Imagery Classification](https://www.nature.com/articles/s41598-024-71118-7) | `CNN-Transformer` | CNN local features + Transformer global dependencies | |
+| 2023 | [EEG Conformer: Convolutional Transformer for EEG Decoding and Visualization](https://ieeexplore.ieee.org/document/9991178) | `Conformer` | Conv + self-attention; CAM-based topographic visualization | [[Code]](https://github.com/eeyhsong/EEG-Conformer) |
+| 2022 | [ATCNet: Attention Temporal Convolutional Network for EEG-based Motor Imagery Classification](https://ieeexplore.ieee.org/document/9852687) | `TCN` | Sliding window + multi-head attention + TCN residual | [[Code]](https://github.com/Altaheri/EEG-ATCNet) |
 
 ---
 
@@ -213,26 +213,11 @@
 
 > Recent breakthroughs demonstrating real-world clinical impact.
 
-### Synchron & Apple: Thought-Controlled iPad (2025)
-
-*In August 2025, Synchron demonstrated the first-ever thought-controlled iPad using Apple's new BCI Human Interface Device (HID) protocol. Mark, a patient with ALS, navigated the iPad home screen, launched apps, and composed text messages—all using only his thoughts, without moving his hands, speaking, or using his eyes.*
-
-- **Key Tech**: Stentrode endovascular implant (minimally invasive), Apple BCI HID protocol, Switch Control integration
-- [[News]](https://www.businesswire.com/news/home/20250804537175/en/Synchron-Debuts-First-Thought-Controlled-iPad-Experience-Using-Apples-New-BCI-Human-Interface-Device-Protocol) [[Video Demo]](https://www.youtube.com/watch?v=YK8r5vdpozA)
-
-### Neuralink's First Human Patient: Telepathy (2024)
-
-*In January 2024, Neuralink implanted its "Telepathy" device in Noland Arbaugh, a patient with quadriplegia. He was able to control a computer cursor to play chess and Civilization VI solely through his thoughts.*
-
-- **Key Tech**: High-channel count invasive recording, spike sorting, real-time decoding
-- [[News]](https://neuralink.com/blog/) [[Video Demo]](https://www.youtube.com/watch?v=2rXrGH52aoM)
-
-### UC Davis ALS Speech BCI (2024)
-
-*In August 2024, researchers at UC Davis Health successfully used a BCI to restore speech for a man with ALS (Casey Harrell). The system decoded his intended speech with >97% accuracy within minutes of use, maintaining his own voice identity.*
-
-- **Key Tech**: High-density ECoG, deep learning for phoneme-to-speech mapping
-- [[Press Release]](https://health.ucdavis.edu/news/headlines/new-brain-computer-interface-allows-man-with-als-to-speak-again/2024/08) [[Paper (NEJM)]](https://www.nejm.org/doi/full/10.1056/NEJMoa2314132)
+| Case | Year | Description | Links |
+|------|------|-------------|-------|
+| **Synchron & Apple: Thought-Controlled iPad** | 2025 | ALS patient controlled iPad via Stentrode implant + Apple BCI HID protocol—navigating apps, composing texts using only thoughts | [[News]](https://www.businesswire.com/news/home/20250804537175/en/Synchron-Debuts-First-Thought-Controlled-iPad-Experience-Using-Apples-New-BCI-Human-Interface-Device-Protocol) [[Video]](https://www.youtube.com/watch?v=YK8r5vdpozA) |
+| **Neuralink Telepathy** | 2024 | First Neuralink human implant; quadriplegic patient played chess & Civilization VI via cursor control using thoughts alone | [[News]](https://neuralink.com/blog/) [[Video]](https://www.youtube.com/watch?v=2rXrGH52aoM) |
+| **UC Davis ALS Speech BCI** | 2024 | Restored speech for ALS patient with >97% accuracy; preserved voice identity using high-density ECoG | [[Press]](https://health.ucdavis.edu/news/headlines/new-brain-computer-interface-allows-man-with-als-to-speak-again/2024/08) [[Paper]](https://www.nejm.org/doi/full/10.1056/NEJMoa2314132) |
 
 ---
 
